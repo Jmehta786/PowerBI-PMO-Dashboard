@@ -9,7 +9,7 @@ A one-page Power BI dashboard for a project management office (PMO). It tracks *
 
 
 ![PMO Project Dashboard](docs/images/Dashboard.png) 
-![PMO Project screenshot-projects with milestone and their status](https://github.com/Jmehta786/PowerBI-PMO-Dashboard/blob/main/docs/images/Project-Dashboard%20overview.png)) 
+![PMO Project screenshot-projects with milestone and their status]
 ![PMO Project screenshot-Risk with impact on each project](docs/images/Risk with impact on each project.png)
 <!-- ![PMO Project Dashboard](docs/images/Dashboard.png)  -->
 <!-- ![Report layout](docs/images/report-layout.svg) -->
