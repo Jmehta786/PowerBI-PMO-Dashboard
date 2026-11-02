@@ -8,7 +8,7 @@
 A one-page Power BI dashboard for a project management office (PMO). It tracks **budget, timelines, milestones, risks and the number of active projects each month** across a portfolio of 10 projects running through 2024.
 
 
-![PMO Project Dashboard](docs/images/dashboard.png) 
+![PMO Project Dashboard](docs/images/Dashboard.png) 
 
 ![Report layout](docs/images/report-layout.svg)
 
