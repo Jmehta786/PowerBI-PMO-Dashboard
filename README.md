@@ -173,6 +173,6 @@ Explicit KPI measures (budget utilisation %, critical risks, milestone slippage)
 
 ## Author
 
-**[Your Name]** · [LinkedIn](https://www.linkedin.com/in/your-profile) · [Email](mailto:you@example.com)
+**Janki Mehta** · [LinkedIn](www.linkedin.com/in/janki-mehta-39783745) · [Email](mailto:jankimehta1984@gmail.com)
 
-*Built with a sample PMO dataset of 10 projects in 2024. Budget figures are in whole currency units.*
+*Built with a Hypothetical PMO dataset of 10 projects. Budget figures are in whole currency units.*
