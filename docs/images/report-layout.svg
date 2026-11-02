@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 776" width="1280" height="776" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
+<rect width="1280" height="776" fill="#ffffff"/>
+<rect x="0.5" y="0.5" width="1279" height="719" fill="#fafafa" stroke="#d1d5db"/>
+<rect x="3" y="3" width="1273" height="54" rx="6" fill="#1f2937"/>
+<text x="640" y="39" text-anchor="middle" font-size="26" font-weight="600" fill="#ffffff">Project Dashboard</text>
+<rect x="334" y="65" width="310" height="75" rx="6" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.5"/>
+<text x="489" y="98" text-anchor="middle" font-size="16" font-weight="600" fill="#065f46">Allocated budget</text>
+<text x="489" y="120" text-anchor="middle" font-size="13" fill="#0f766e" letter-spacing="0.5">KPI CARD</text>
+<rect x="649" y="65" width="304" height="69" rx="6" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.5"/>
+<text x="801" y="95" text-anchor="middle" font-size="16" font-weight="600" fill="#065f46">Spent to date</text>
+<text x="801" y="117" text-anchor="middle" font-size="13" fill="#0f766e" letter-spacing="0.5">KPI CARD</text>
+<rect x="3" y="73" width="205" height="79" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="105" y="108" text-anchor="middle" font-size="16" font-weight="600" fill="#374151">Select budget</text>
+<text x="105" y="130" text-anchor="middle" font-size="13" fill="#6b7280" letter-spacing="0.5">SLICER</text>
+<rect x="225" y="158" width="526" height="226" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="489" y="267" text-anchor="middle" font-size="18" font-weight="600" fill="#1e3a8a">Allocated vs spent by project</text>
+<text x="489" y="289" text-anchor="middle" font-size="13" fill="#1d4ed8" letter-spacing="0.5">CLUSTERED BAR</text>
+<rect x="751" y="158" width="526" height="226" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="1014" y="267" text-anchor="middle" font-size="18" font-weight="600" fill="#1e3a8a">Risks per project · status × impact</text>
+<text x="1014" y="289" text-anchor="middle" font-size="13" fill="#1d4ed8" letter-spacing="0.5">CLUSTERED COLUMN</text>
+<rect x="3" y="158" width="216" height="288" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="111" y="298" text-anchor="middle" font-size="18" font-weight="600" fill="#374151">Select Project</text>
+<text x="111" y="320" text-anchor="middle" font-size="13" fill="#6b7280" letter-spacing="0.5">SLICER</text>
+<rect x="225" y="391" width="1052" height="174" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="751" y="474" text-anchor="middle" font-size="18" font-weight="600" fill="#1e3a8a">Milestone status by project</text>
+<text x="751" y="496" text-anchor="middle" font-size="13" fill="#1d4ed8" letter-spacing="0.5">100% STACKED COLUMN</text>
+<rect x="3" y="450" width="216" height="265" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="111" y="579" text-anchor="middle" font-size="18" font-weight="600" fill="#374151">Select Risk</text>
+<text x="111" y="601" text-anchor="middle" font-size="13" fill="#6b7280" letter-spacing="0.5">SLICER</text>
+<rect x="226" y="545" width="1051" height="143" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="752" y="613" text-anchor="middle" font-size="18" font-weight="600" fill="#1e3a8a">Active projects by month</text>
+<text x="752" y="635" text-anchor="middle" font-size="13" fill="#1d4ed8" letter-spacing="0.5">LINE CHART</text>
+<rect x="16" y="742" width="18" height="18" rx="4" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.5"/>
+<text x="42" y="756" font-size="14" fill="#374151">KPI card</text>
+<rect x="146" y="742" width="18" height="18" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="172" y="756" font-size="14" fill="#374151">Chart</text>
+<rect x="276" y="742" width="18" height="18" rx="4" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="302" y="756" font-size="14" fill="#374151">Slicer</text>
+<text x="1264" y="756" text-anchor="end" font-size="13" fill="#6b7280">Layout of the report page (1280 × 720), taken from the .pbix</text>
+</svg>
