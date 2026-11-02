@@ -1,0 +1,17 @@
+RiskID,ProjectID,RiskDescription,Impact,Probability,Status
+R001,P001,Scope creep,Medium,Low,Open
+R002,P001,Vendor delay,High,Low,Closed
+R003,P002,Data migration issues,High,Medium,Open
+R004,P002,Integration failure,High,Medium,Open
+R005,P003,Resource shortage,Medium,Medium,Open
+R006,P003,Testing delays,Medium,High,Open
+R007,P004,Security vulnerabilities,High,High,Open
+R008,P004,App store rejection,Medium,Medium,Open
+R009,P005,Patch compatibility issues,Low,Low,Closed
+R010,P006,Cloud downtime,High,Medium,Open
+R011,P006,Cost overrun,Medium,Medium,Open
+R012,P007,User adoption issues,Medium,Low,Open
+R013,P008,Automation failure,High,High,Open
+R014,P008,Regulatory compliance risk,High,Medium,Open
+R015,P009,Data quality issues,Medium,Low,Closed
+R016,P010,Hardware delays,Medium,Low,Open

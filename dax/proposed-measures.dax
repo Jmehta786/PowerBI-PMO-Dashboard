@@ -1,0 +1,98 @@
+// =====================================================================
+// PMO Project Dashboard – proposed measures (next iteration)
+// =====================================================================
+// These measures are NOT in the current .pbix yet. They replace the
+// implicit aggregations used by the visuals with explicit, reusable
+// measures, and add KPIs for the next version of the dashboard.
+// See docs/roadmap.md.
+// =====================================================================
+
+
+// ---------------------------------------------------------------------
+// Budget
+// ---------------------------------------------------------------------
+Total Allocated Budget =
+SUM ( Budgets[AllocatedBudget] )
+
+Total Spent =
+SUM ( Budgets[SpentToDate] )
+
+Total Remaining =
+SUM ( Budgets[RemainingBudget] )
+
+Budget Utilisation % =
+DIVIDE ( [Total Spent], [Total Allocated Budget] )
+// Format string: 0.0%
+
+
+// ---------------------------------------------------------------------
+// Risks
+// ---------------------------------------------------------------------
+Total Risks =
+COUNTROWS ( Risks )
+
+Open Risks =
+CALCULATE ( COUNTROWS ( Risks ), Risks[Status] = "Open" )
+
+Open High-Impact Risks =
+CALCULATE (
+    COUNTROWS ( Risks ),
+    Risks[Status] = "Open",
+    Risks[Impact] = "High"
+)
+
+Critical Risks (High x High) =
+CALCULATE (
+    COUNTROWS ( Risks ),
+    Risks[Status] = "Open",
+    Risks[Impact] = "High",
+    Risks[Probability] = "High"
+)
+
+
+// ---------------------------------------------------------------------
+// Milestones / schedule
+// ---------------------------------------------------------------------
+Total Milestones =
+COUNTROWS ( Milestones )
+
+Delayed Milestones =
+CALCULATE ( COUNTROWS ( Milestones ), Milestones[Status] = "Delayed" )
+
+Delayed Milestones % =
+DIVIDE ( [Delayed Milestones], [Total Milestones] )
+// Format string: 0.0%
+
+Avg Milestone Slippage (days) =
+AVERAGEX (
+    FILTER ( Milestones, NOT ISBLANK ( Milestones[ActualDate] ) ),
+    INT ( Milestones[ActualDate] - Milestones[PlannedDate] )
+)
+// Positive = finished late, negative = finished early
+
+
+// ---------------------------------------------------------------------
+// Active projects – slicer-aware variant
+// ---------------------------------------------------------------------
+// The original [Active Projects] uses ALL(Projects), so it always shows
+// the whole portfolio. This version respects the "Select Project"
+// slicer, so the trend line follows the user's selection.
+Active Projects (Selected) =
+VAR CurrentDate = MAX ( DateTable[Date] )
+RETURN
+    COUNTROWS (
+        FILTER (
+            Projects,
+            Projects[StartDate] <= CurrentDate
+                && Projects[EndDate] >= CurrentDate
+        )
+    ) + 0
+// "+ 0" shows 0 instead of a gap for months with no active projects
+
+
+// ---------------------------------------------------------------------
+// DateTable – month sort helper (calculated column)
+// ---------------------------------------------------------------------
+// Add to DateTable, then: Column tools > Sort by column > Month by MonthNo.
+// MonthNo =
+// MONTH ( DateTable[Date] )

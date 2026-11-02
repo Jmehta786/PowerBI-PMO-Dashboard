@@ -1,0 +1,11 @@
+ProjectID,ProjectName,StartDate,EndDate,Status
+P001,Website Redesign,2024-01-10,2024-06-30,Green
+P002,CRM Upgrade,2024-02-01,2024-12-15,Amber
+P003,Data Warehouse Build,2024-07-20,2024-09-30,Amber
+P004,Mobile App Launch,2024-01-05,2024-11-20,Red
+P005,Security Patch Rollout,2024-03-01,2024-07-15,Green
+P006,Cloud Migration,2024-02-15,2024-10-30,Amber
+P007,HR System Refresh,2024-01-25,2024-08-10,Green
+P008,Finance Automation,2024-03-10,2024-12-05,Red
+P009,Analytics Dashboard,2024-06-12,2024-07-25,Green
+P010,Network Upgrade,2024-02-05,2024-09-18,Green

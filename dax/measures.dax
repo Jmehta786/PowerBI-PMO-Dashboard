@@ -1,0 +1,52 @@
+// =====================================================================
+// PMO Project Dashboard – DAX measures
+// Extracted from report/PMO_Project_Dashboard.pbix
+// =====================================================================
+
+
+// ---------------------------------------------------------------------
+// Active Projects                                    Home table: Projects
+// ---------------------------------------------------------------------
+// Point-in-time count of projects that are "live" on the last date in
+// the current filter context of the (disconnected) DateTable.
+//
+// How it works
+//   1. CurrentDate = the latest date visible in the visual's context
+//      (for a month on the axis, that is the month-end date).
+//   2. ALL(Projects) evaluates every project, independent of filters
+//      on the Projects table.
+//   3. A project counts when StartDate <= CurrentDate <= EndDate.
+//
+// Why a disconnected DateTable?
+//   Projects have two dates (start and end). A normal relationship to a
+//   single date column could only answer "projects that started in
+//   month X". Comparing the calendar date against both columns inside
+//   the measure answers "projects in flight during month X".
+//
+// Used in: line chart "Active Projects by Month"
+// ---------------------------------------------------------------------
+Active Projects =
+VAR CurrentDate = MAX ( DateTable[Date] )
+RETURN
+    COUNTROWS (
+        FILTER (
+            ALL ( Projects ),
+            Projects[StartDate] <= CurrentDate
+                && Projects[EndDate] >= CurrentDate
+        )
+    )
+
+
+// ---------------------------------------------------------------------
+// Implicit measures used by visuals
+// ---------------------------------------------------------------------
+// The visuals below use Power BI's built-in aggregations rather than
+// explicit measures:
+//
+//   Card – Allocated budget         Sum of Budgets[AllocatedBudget]
+//   Card – Spent to date            Sum of Budgets[SpentToDate]
+//   Bar  – Budget vs spend          Sum of AllocatedBudget, Sum of SpentToDate
+//   Column – Risks per project      Count of Risks[RiskID]
+//   100% column – Milestone status  Count of Projects[StartDate]
+//
+// Explicit versions of these are in proposed-measures.dax.

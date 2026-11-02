@@ -1,0 +1,25 @@
+// =====================================================================
+// DateTable – calculated table and columns
+// Extracted from report/PMO_Project_Dashboard.pbix
+// =====================================================================
+//
+// A calendar spanning the full portfolio: from the earliest project
+// start to the latest project end. It has no relationships. The
+// [Active Projects] measure reads it as a disconnected "as at" date
+// (see measures.dax).
+
+
+// Calculated table
+DateTable =
+CALENDAR ( MIN ( Projects[StartDate] ), MAX ( Projects[EndDate] ) )
+
+
+// Calculated columns
+Month =
+FORMAT ( DateTable[Date], "MMM" )          // Jan, Feb, ...
+
+Year =
+YEAR ( DateTable[Date] )                   // 2024
+
+YearMonth =
+FORMAT ( DateTable[Date], "YYYY-MM" )      // 2024-01 (sorts chronologically)
